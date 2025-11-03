@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- STANDARD TITLE (for browser tab) -->
-    <title>Bharat Menon Radhakrishnan, C-Suite Leader</title>
+    <!-- STANDARD TITLE (for browser tab) --><title>Bharat Menon Radhakrishnan, C-Suite Leader</title>
 
-    <!-- OPEN GRAPH METADATA (for link sharing/metadata preview) -->
-    <meta property="og:title" content="Bharat Menon Radhakrishnan, C-Suite Leader" />
+    <!-- OPEN GRAPH METADATA (for link sharing/metadata preview) --><meta property="og:title" content="Bharat Menon Radhakrishnan, C-Suite Leader" />
     <meta property="og:description" content="Founder-minded executive with a rare career trajectory from Analyst to CEO in eight years. Expert in E-Commerce, Operations, and P&L Management." />
     <meta property="og:type" content="profile" />
-    <!-- Optional: Add an og:image tag here if you want a specific image (like your headshot) to appear in the preview -->
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Add an og:image tag here if you want a specific image (like your headshot) to appear in the preview --><script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -58,6 +54,11 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
+        /* --- Custom Headshot Positioning --- */
+        .profile-headshot {
+            object-position: 50% 35%; /* Adjust vertical position: 50% (center horizontal) and 35% (35% from the top, pushing it down). Experiment with this value! */
+        }
+
         /* --- Cleaned-up Timeline Specific Styles --- */
         .timeline-container {
             padding-left: 0; 
@@ -83,23 +84,19 @@
 <body class="text-gray-800">
 
     <div class="flex min-h-screen">
-        <!-- Sidebar Navigation -->
-        <nav class="w-64 bg-white shadow-lg fixed top-0 left-0 h-full z-30 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+        <!-- Sidebar Navigation --><nav class="w-64 bg-white shadow-lg fixed top-0 left-0 h-full z-30 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
             <div class="p-6">
-                <!-- Headshot (Updated with onerror fallback) -->
-                <div class="mb-4 flex justify-center">
+                <!-- Headshot (Updated with onerror fallback) --><div class="mb-4 flex justify-center">
                     <!-- Note: The image path below is the specific uploaded file ID. If it fails, the 'onerror'
-                         attribute ensures the blue "BM" placeholder is displayed instead. -->
-                    <img 
+                         attribute ensures the blue "BM" placeholder is displayed instead. --><img 
                         src="headshot.JPG" 
                         alt="Bharat Menon Radhakrishnan Headshot" 
-                        class="w-30 h-30 object-cover rounded-full border-4 border-blue-100 shadow-lg"
+                        class="w-24 h-24 object-cover rounded-full border-4 border-blue-100 shadow-lg profile-headshot"
                         onerror="this.onerror=null; this.src='https://placehold.co/96x96/60A5FA/ffffff?text=BM'"
                         loading="lazy"
                     >
                 </div>
-                <!-- Profile Text -->
-                <h1 class="text-xl font-bold text-gray-900 text-center">Bharat Menon Radhakrishnan</h1>
+                <!-- Profile Text --><h1 class="text-xl font-bold text-gray-900 text-center">Bharat Menon Radhakrishnan</h1>
                 <p class="text-sm text-blue-600 font-medium text-center">C-Suite Leader</p>
             </div>
             <div class="mt-4 space-y-1">
@@ -124,10 +121,8 @@
             </div>
         </nav>
 
-        <!-- Main Content Area -->
-        <main class="flex-1 md:pl-64 bg-gray-50">
-            <!-- Top Bar -->
-            <header class="flex items-center justify-between p-4 bg-white shadow-md md:shadow-none sticky top-0 z-20 md:z-auto">
+        <!-- Main Content Area --><main class="flex-1 md:pl-64 bg-gray-50">
+            <!-- Top Bar --><header class="flex items-center justify-between p-4 bg-white shadow-md md:shadow-none sticky top-0 z-20 md:z-auto">
                 <button class="md:hidden p-2 text-gray-700" id="menu-toggle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -136,11 +131,9 @@
                 <h2 class="text-2xl font-semibold text-gray-900" id="section-title">Profile Summary</h2>
             </header>
 
-            <!-- Content Panels -->
-            <div class="p-6 md:p-10">
+            <!-- Content Panels --><div class="p-6 md:p-10">
 
-                <!-- 1. Home / Profile Summary -->
-                <section class="content-panel" id="home">
+                <!-- 1. Home / Profile Summary --><section class="content-panel" id="home">
                     <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                         <h3 class="text-lg font-semibold text-blue-600 mb-2">DRIVING ENTERPRISE GROWTH</h3>
                         <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">"My career has been defined by transforming a traditional B2B supplier into a diversified, multi-channel e-commerce powerhouse."</p>
@@ -151,39 +144,33 @@
                     </div>
                 </section>
 
-                <!-- 2. Career Trajectory (Cleaned up) -->
-                <section class="content-panel hidden" id="trajectory">
+                <!-- 2. Career Trajectory (Cleaned up) --><section class="content-panel hidden" id="trajectory">
                     <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
                         <h3 class="text-2xl font-bold text-gray-900 mb-8">Analyst to CEO in 8 Years</h3>
                         <p class="text-lg text-gray-700 mb-10">This visual timeline outlines the rapid, four-promotion progression at Pentagon Safety Equipment, culminating in the CEO role. Each step involved building and scaling new capabilities, from foundational analytics to full P&L and strategic enterprise management.</p>
                         
                         <div class="timeline-container">
-                            <!-- Step 1 -->
-                            <div class="timeline-step">
+                            <!-- Step 1 --><div class="timeline-step">
                                 <h4 class="text-xl font-semibold text-gray-800">Analyst</h4>
                                 <p class="text-gray-600 font-medium">2017 – 2019</p>
                                 <p class="text-gray-700 mt-2">Built foundational business models and analytics from scratch, identifying key market opportunities and operational inefficiencies.</p>
                             </div>
-                            <!-- Step 2 -->
-                            <div class="timeline-step">
+                            <!-- Step 2 --><div class="timeline-step">
                                 <h4 class="text-xl font-semibold text-gray-800">Manager</h4>
                                 <p class="text-gray-600 font-medium">2019 – 2021</p>
                                 <p class="text-gray-700 mt-2">Led teams to execute on insights. Began building the e-commerce division and optimizing initial logistics frameworks.</p>
                             </div>
-                            <!-- Step 3 -->
-                            <div class="timeline-step">
+                            <!-- Step 3 --><div class="timeline-step">
                                 <h4 class="text-xl font-semibold text-gray-800">Director</h4>
                                 <p class="text-gray-600 font-medium">2021 – 2023</p>
                                 <p class="text-gray-700 mt-2">Scaled the e-commerce and operational functions, diversified supply chains, and implemented performance dashboards company-wide.</p>
                             </div>
-                            <!-- Step 4 -->
-                            <div class="timeline-step">
+                            <!-- Step 4 --><div class="timeline-step">
                                 <h4 class="text-xl font-semibold text-gray-800">Chief Operating Officer (COO)</h4>
                                 <p class="text-gray-600 font-medium">2023 – 2024</p>
                                 <p class="text-gray-700 mt-2">Assumed full responsibility for all cross-border logistics, warehouse operations, and data infrastructure, driving major cost and accuracy improvements.</p>
                             </div>
-                            <!-- Step 5 -->
-                            <div class="timeline-step">
+                            <!-- Step 5 --><div class="timeline-step">
                                 <h4 class="text-xl font-semibold text-gray-800">Chief Executive Officer (CEO)</h4>
                                 <p class="text-gray-600 font-medium">2024 – Present</p>
                                 <p class="text-gray-700 mt-2">Full P&L and strategic responsibility. Set enterprise vision, secured capital, and led the company to exponential, profitable growth.</p>
@@ -192,14 +179,12 @@
                     </div>
                 </section>
 
-                <!-- 3. Core Competencies -->
-                <section class="content-panel hidden" id="competencies">
+                <!-- 3. Core Competencies --><section class="content-panel hidden" id="competencies">
                     <div class="max-w-6xl mx-auto">
                         <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">These three pillars represent my core capabilities. They are the engine behind the achievements, a blend of high-level strategy, operational excellence, and high-growth execution. Explore the "Key Achievements" section to see these competencies in action.</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- Pillar 1 -->
-                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                            <!-- Pillar 1 --><div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
                                 <h4 class="text-2xl font-bold text-gray-900 mb-4">Leadership & Strategy</h4>
                                 <ul class="space-y-2 text-gray-700 list-disc list-inside">
                                     <li>P&L Management</li>
@@ -210,8 +195,7 @@
                                     <li>Capital Raising & Finance</li>
                                 </ul>
                             </div>
-                            <!-- Pillar 2 -->
-                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                            <!-- Pillar 2 --><div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
                                 <h4 class="text-2xl font-bold text-gray-900 mb-4">Operations & Supply Chain</h4>
                                 <ul class="space-y-2 text-gray-700 list-disc list-inside">
                                     <li>Global Supply Chain Strategy</li>
@@ -222,8 +206,7 @@
                                     <li>Process Re-engineering</li>
                                 </ul>
                             </div>
-                            <!-- Pillar 3 -->
-                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                            <!-- Pillar 3 --><div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
                                 <h4 class="text-2xl font-bold text-gray-900 mb-4">E-Commerce & Growth</h4>
                                 <ul class="space-y-2 text-gray-700 list-disc list-inside">
                                     <li>Multi-Channel E-Commerce</li>
@@ -238,21 +221,18 @@
                     </div>
                 </section>
 
-                <!-- 4. Key Achievements -->
-                <section class="content-panel hidden" id="achievements">
+                <!-- 4. Key Achievements --><section class="content-panel hidden" id="achievements">
                     <div class="max-w-6xl mx-auto">
                         <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">This is an interactive dashboard of key C-Suite achievements. Select a competency below to filter the results and see the direct impact of my strategic, operational, and growth-focused leadership.</p>
 
-                        <!-- Filter Buttons -->
-                        <div class="flex flex-wrap justify-center gap-3 mb-10" id="filter-controls">
+                        <!-- Filter Buttons --><div class="flex flex-wrap justify-center gap-3 mb-10" id="filter-controls">
                             <button class="filter-btn active bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="all">Show All</button>
                             <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="ecom">E-Commerce & Growth</button>
                             <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="ops">Operations & Supply Chain</button>
                             <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="lead">Leadership & Strategy</button>
                         </div>
 
-                        <!-- Achievements Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="achievements-grid">
+                        <!-- Achievements Grid --><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="achievements-grid">
                             
                             <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ecom">
                                 <span class="text-4xl font-bold text-blue-600">100x</span>
@@ -308,8 +288,7 @@
                     </div>
                 </section>
 
-                <!-- 5. Experience & Education -->
-                <section class="content-panel hidden" id="experience">
+                <!-- 5. Experience & Education --><section class="content-panel hidden" id="experience">
                     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-white p-8 rounded-lg shadow-xl">
                             <h3 class="text-2xl font-bold text-gray-900 mb-6">Education & Development</h3>
@@ -348,8 +327,7 @@
                     </div>
                 </section>
 
-                <!-- 6. Contact (Links verified) -->
-                <section class="content-panel hidden" id="contact">
+                <!-- 6. Contact (Links verified) --><section class="content-panel hidden" id="contact">
                     <div class="bg-white p-8 rounded-lg shadow-xl max-w-xl mx-auto text-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">Connect with Bharat</h3>
                         <p class="text-lg text-gray-700 mb-8">Thank you for reviewing my profile. I am always open to discussing strategic opportunities, operational challenges, and e-commerce growth.</p>
