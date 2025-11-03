@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- STANDARD TITLE (for browser tab) -->
+    <title>Bharat Menon Radhakrishnan, C-Suite Leader</title>
+
+    <!-- OPEN GRAPH METADATA (for link sharing/metadata preview) -->
+    <meta property="og:title" content="Bharat Menon Radhakrishnan, C-Suite Leader" />
+    <meta property="og:description" content="Founder-minded executive with a rare career trajectory from Analyst to CEO in eight years. Expert in E-Commerce, Operations, and P&L Management." />
+    <meta property="og:type" content="profile" />
+    <!-- Optional: Add an og:image tag here if you want a specific image (like your headshot) to appear in the preview -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; 
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            transform: translateX(0);
+        }
+        .nav-link:hover {
+            background-color: #eff6ff; 
+            color: #1d4ed8;
+            transform: translateX(2px);
+        }
+        .nav-link.active {
+            background-color: #dbeafe; 
+            color: #1e40af;
+            border-right: 4px solid #2563eb; 
+            font-weight: 600;
+        }
+        .content-panel {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .achievement-card {
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .achievement-card.hidden {
+            display: none;
+        }
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* --- Cleaned-up Timeline Specific Styles --- */
+        .timeline-container {
+            padding-left: 0; 
+        }
+        .timeline-step {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px; 
+            border-left: 3px solid #dbeafe; 
+            transition: border-left-color 0.3s ease;
+        }
+        .timeline-step:hover {
+            border-left-color: #2563eb; 
+        }
+        .timeline-step:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-container:before, .timeline-dot {
+            display: none !important; 
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <nav class="w-64 bg-white shadow-lg fixed top-0 left-0 h-full z-30 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+            <div class="p-6">
+                <!-- Headshot (Updated with onerror fallback) -->
+                <div class="mb-4 flex justify-center">
+                    <!-- Note: The image path below is the specific uploaded file ID. If it fails, the 'onerror'
+                         attribute ensures the blue "BM" placeholder is displayed instead. -->
+                    <img 
+                        src="uploaded:headshot.JPG-d43238b9-458b-4f46-8092-2ce9a6c70269" 
+                        alt="Bharat Menon Radhakrishnan Headshot" 
+                        class="w-24 h-24 object-cover rounded-full border-4 border-blue-100 shadow-lg"
+                        onerror="this.onerror=null; this.src='https://placehold.co/96x96/60A5FA/ffffff?text=BM'"
+                        loading="lazy"
+                    >
+                </div>
+                <!-- Profile Text -->
+                <h1 class="text-xl font-bold text-gray-900 text-center">Bharat Menon Radhakrishnan</h1>
+                <p class="text-sm text-blue-600 font-medium text-center">C-Suite Leader</p>
+            </div>
+            <div class="mt-4 space-y-1">
+                <a href="#" class="nav-link active flex items-center px-6 py-3 text-gray-700" data-target="home">
+                    <span class="mr-3">❖</span> Profile Summary
+                </a>
+                <a href="#" class="nav-link flex items-center px-6 py-3 text-gray-700" data-target="trajectory">
+                    <span class="mr-3">▲</span> Career Trajectory
+                </a>
+                <a href="#" class="nav-link flex items-center px-6 py-3 text-gray-700" data-target="competencies">
+                    <span class="mr-3">✚</span> Core Competencies
+                </a>
+                <a href="#" class="nav-link flex items-center px-6 py-3 text-gray-700" data-target="achievements">
+                    <span class="mr-3">★</span> Key Achievements
+                </a>
+                <a href="#" class="nav-link flex items-center px-6 py-3 text-gray-700" data-target="experience">
+                    <span class="mr-3">■</span> Experience & Education
+                </a>
+                <a href="#" class="nav-link flex items-center px-6 py-3 text-gray-700" data-target="contact">
+                    <span class="mr-3">►</span> Contact
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 md:pl-64 bg-gray-50">
+            <!-- Top Bar -->
+            <header class="flex items-center justify-between p-4 bg-white shadow-md md:shadow-none sticky top-0 z-20 md:z-auto">
+                <button class="md:hidden p-2 text-gray-700" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <h2 class="text-2xl font-semibold text-gray-900" id="section-title">Profile Summary</h2>
+            </header>
+
+            <!-- Content Panels -->
+            <div class="p-6 md:p-10">
+
+                <!-- 1. Home / Profile Summary -->
+                <section class="content-panel" id="home">
+                    <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                        <h3 class="text-lg font-semibold text-blue-600 mb-2">DRIVING ENTERPRISE GROWTH</h3>
+                        <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">"My career has been defined by transforming a traditional B2B supplier into a diversified, multi-channel e-commerce powerhouse."</p>
+                        <div class="text-lg text-gray-700 space-y-4 leading-relaxed">
+                            <p>I’m a founder-minded executive with a rare career trajectory from Analyst to CEO in eight years. I thrive in high-growth, complex environments, building the systems, teams, and strategies that turn vision into reality.</p>
+                            <p>I led this transformation from the ground up: first by building the analytical models as an analyst, then by scaling the operational infrastructure as a COO, and finally by setting the enterprise-level strategy as CEO. This application provides an interactive overview of that journey.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Career Trajectory (Cleaned up) -->
+                <section class="content-panel hidden" id="trajectory">
+                    <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Analyst to CEO in 8 Years</h3>
+                        <p class="text-lg text-gray-700 mb-10">This visual timeline outlines the rapid, four-promotion progression at Pentagon Safety Equipment, culminating in the CEO role. Each step involved building and scaling new capabilities, from foundational analytics to full P&L and strategic enterprise management.</p>
+                        
+                        <div class="timeline-container">
+                            <!-- Step 1 -->
+                            <div class="timeline-step">
+                                <h4 class="text-xl font-semibold text-gray-800">Analyst</h4>
+                                <p class="text-gray-600 font-medium">2017 – 2019</p>
+                                <p class="text-gray-700 mt-2">Built foundational business models and analytics from scratch, identifying key market opportunities and operational inefficiencies.</p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="timeline-step">
+                                <h4 class="text-xl font-semibold text-gray-800">Manager</h4>
+                                <p class="text-gray-600 font-medium">2019 – 2021</p>
+                                <p class="text-gray-700 mt-2">Led teams to execute on insights. Began building the e-commerce division and optimizing initial logistics frameworks.</p>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="timeline-step">
+                                <h4 class="text-xl font-semibold text-gray-800">Director</h4>
+                                <p class="text-gray-600 font-medium">2021 – 2023</p>
+                                <p class="text-gray-700 mt-2">Scaled the e-commerce and operational functions, diversified supply chains, and implemented performance dashboards company-wide.</p>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="timeline-step">
+                                <h4 class="text-xl font-semibold text-gray-800">Chief Operating Officer (COO)</h4>
+                                <p class="text-gray-600 font-medium">2023 – 2024</p>
+                                <p class="text-gray-700 mt-2">Assumed full responsibility for all cross-border logistics, warehouse operations, and data infrastructure, driving major cost and accuracy improvements.</p>
+                            </div>
+                            <!-- Step 5 -->
+                            <div class="timeline-step">
+                                <h4 class="text-xl font-semibold text-gray-800">Chief Executive Officer (CEO)</h4>
+                                <p class="text-gray-600 font-medium">2024 – Present</p>
+                                <p class="text-gray-700 mt-2">Full P&L and strategic responsibility. Set enterprise vision, secured capital, and led the company to exponential, profitable growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Core Competencies -->
+                <section class="content-panel hidden" id="competencies">
+                    <div class="max-w-6xl mx-auto">
+                        <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">These three pillars represent my core capabilities. They are the engine behind the achievements, a blend of high-level strategy, operational excellence, and high-growth execution. Explore the "Key Achievements" section to see these competencies in action.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Pillar 1 -->
+                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-4">Leadership & Strategy</h4>
+                                <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                    <li>P&L Management</li>
+                                    <li>Full-Cycle Execution</li>
+                                    <li>Strategic Planning</li>
+                                    <li>Team Leadership & Mentoring</li>
+                                    <li>Stakeholder Management</li>
+                                    <li>Capital Raising & Finance</li>
+                                </ul>
+                            </div>
+                            <!-- Pillar 2 -->
+                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-4">Operations & Supply Chain</h4>
+                                <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                    <li>Global Supply Chain Strategy</li>
+                                    <li>Cross-Border Logistics</li>
+                                    <li>Warehouse Operations</li>
+                                    <li>3PL & Fulfillment Optimization</li>
+                                    <li>Performance Dashboards</li>
+                                    <li>Process Re-engineering</li>
+                                </ul>
+                            </div>
+                            <!-- Pillar 3 -->
+                            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-blue-600">
+                                <h4 class="text-2xl font-bold text-gray-900 mb-4">E-Commerce & Growth</h4>
+                                <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                    <li>Multi-Channel E-Commerce</li>
+                                    <li>Amazon Seller Central Expert</li>
+                                    <li>Digital Marketing Strategy</li>
+                                    <li>Strategic Partnerships</li>
+                                    <li>Customer & Market Analysis</li>
+                                    <li>New Product Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Key Achievements -->
+                <section class="content-panel hidden" id="achievements">
+                    <div class="max-w-6xl mx-auto">
+                        <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">This is an interactive dashboard of key C-Suite achievements. Select a competency below to filter the results and see the direct impact of my strategic, operational, and growth-focused leadership.</p>
+
+                        <!-- Filter Buttons -->
+                        <div class="flex flex-wrap justify-center gap-3 mb-10" id="filter-controls">
+                            <button class="filter-btn active bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="all">Show All</button>
+                            <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="ecom">E-Commerce & Growth</button>
+                            <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="ops">Operations & Supply Chain</button>
+                            <button class="filter-btn bg-white shadow rounded-full px-6 py-2 font-medium text-gray-700" data-filter="lead">Leadership & Strategy</button>
+                        </div>
+
+                        <!-- Achievements Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="achievements-grid">
+                            
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ecom">
+                                <span class="text-4xl font-bold text-blue-600">100x</span>
+                                <h5 class="text-lg font-semibold mt-2 mb-1">E-Commerce Transformation</h5>
+                                <p class="text-gray-700">Built and scaled the e-commerce division from the ground up, capturing a 100× increase in Amazon sales.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ecom ops lead">
+                                <span class="text-4xl font-bold text-blue-600">300%</span>
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Profitable Growth Strategy</h5>
+                                <p class="text-gray-700">Drove 300% sales growth while simultaneously cutting ad spend by 25% through partnerships and advanced analytics.</p>
+                            </div>
+                            
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ops lead">
+                                <span class="text-4xl font-bold text-blue-600">40%</span>
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Bottom-Line Profitability</h5>
+                                <p class="text-gray-700">Engineered a 40% reduction in fulfillment costs by strategically re-engineering the 3PL model.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ops">
+                                <span class="text-4xl font-bold text-blue-600">35%</span>
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Operational Optimization</h5>
+                                <p class="text-gray-700">Spearheaded optimization of cross-border logistics, improving order accuracy by 35%.</p>
+                            </div>
+                            
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ops lead">
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Supply Chain Architecture</h5>
+                                <p class="text-gray-700 mt-4">Architected a global supply chain diversification strategy into India and Southeast Asia to enhance margins and reduce tariff exposure.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ops lead">
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Data-Driven Culture</h5>
+                                <p class="text-gray-700 mt-4">Pioneered a company-wide shift by integrating real-time performance dashboards for marketing, inventory, and sales, embedding analytics into core decision-making.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="lead">
+                                <span class="text-4xl font-bold text-blue-600">$250K</span>
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Capital & Finance</h5>
+                                <p class="text-gray-700">Secured $250K in preferred share capital to fuel strategic expansion and fortify working capital.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="ecom lead">
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Brand & Market Expansion</h5>
+                                <p class="text-gray-700 mt-4">Championed a market-driven product development strategy, launching new product lines to capture new market segments.</p>
+                            </div>
+
+                            <div class="achievement-card bg-white p-6 rounded-lg shadow-xl" data-category="lead">
+                                <h5 class="text-lg font-semibold mt-2 mb-1">Team & Culture</h5>
+                                <p class="text-gray-700 mt-4">Cultivated a high-performance culture of accountability and innovation, mentoring multi-disciplinary teams to scale productivity.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Experience & Education -->
+                <section class="content-panel hidden" id="experience">
+                    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-lg shadow-xl">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Education & Development</h3>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800">M.Sc., Innovation Management & Entrepreneurship</h4>
+                                <p class="text-blue-600">Brown University</p>
+                            </div>
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800">M.Sc., Electrical Engineering</h4>
+                                <p class="text-blue-600">National University of Singapore</p>
+                            </div>
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800">B.E., Electrical & Electronics Engineering</h4>
+                                <p class="text-blue-600">Anna University</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Certification: Operations Management</h4>
+                                <p class="text-blue-600">University of Illinois Urbana-Champaign (UIUC)</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-lg shadow-xl">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Prior Experience</h3>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-800">Research Engineer</h4>
+                                <p class="text-gray-600 font-medium">National University of Singapore | 2013 – 2016</p>
+                                <ul class="mt-2 text-gray-700 list-disc list-inside space-y-1">
+                                    <li>Led a six-person research team managing a <strong>$2.5M project</strong>, delivering all project KPIs on schedule.</li>
+                                    <li>Authored <strong>3 first-author journal publications</strong> and multiple conference papers.</li>
+                                    <li>Developed and scaled new testing standards and validation processes to enhance data reliability.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Contact (Links verified) -->
+                <section class="content-panel hidden" id="contact">
+                    <div class="bg-white p-8 rounded-lg shadow-xl max-w-xl mx-auto text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Connect with Bharat</h3>
+                        <p class="text-lg text-gray-700 mb-8">Thank you for reviewing my profile. I am always open to discussing strategic opportunities, operational challenges, and e-commerce growth.</p>
+                        <div class="flex justify-center gap-4">
+                            <a href="mailto:bharatrmenon@gmail.com" class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                                Email Me
+                            </a>
+                            <a href="https://linkedin.com/in/bharatrmenon" target="_blank" rel="noopener noreferrer" class="bg-gray-200 text-gray-800 font-medium px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-300">
+                                View LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentPanels = document.querySelectorAll('.content-panel');
+            const sectionTitle = document.getElementById('section-title');
+            const filterControls = document.getElementById('filter-controls');
+            const achievementsGrid = document.getElementById('achievements-grid');
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+
+            // --- Navigation ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.dataset.target;
+
+                    // Update Nav Links
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    link.classList.add('active');
+
+                    // Update Content Panels
+                    contentPanels.forEach(panel => {
+                        if (panel.id === targetId) {
+                            panel.classList.remove('hidden');
+                        } else {
+                            panel.classList.add('hidden');
+                        }
+                    });
+
+                    // Update Header Title
+                    sectionTitle.textContent = link.textContent.trim().replace(/^[❖▲✚★■►]\s*/, '');
+
+                    // Close sidebar on mobile after click
+                    if (window.innerWidth < 768) {
+                        sidebar.classList.add('-translate-x-full');
+                    }
+                });
+            });
+
+            // Set "Home" as default active
+            document.querySelector('.nav-link[data-target="home"]').click();
+
+            // --- Achievement Filtering ---
+            if (filterControls) {
+                filterControls.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'BUTTON') return;
+
+                    const filter = e.target.dataset.filter;
+
+                    // Update Button styles
+                    filterControls.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+
+                    // Filter Cards
+                    const achievementCards = achievementsGrid.querySelectorAll('.achievement-card');
+                    achievementCards.forEach(card => {
+                        const categories = card.dataset.category.split(' ');
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            }
+
+            // --- Mobile Menu Toggle ---
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+        });
+    </script>
+</body>
+</html>
