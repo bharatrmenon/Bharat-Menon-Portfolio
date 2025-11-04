@@ -1,2 +1,2 @@
 # Bharat-Menon-Portfolio
-Test
+I’ve spent my career inside fast-moving, small-to-mid-sized companies — the kind where you wear ten hats,build from scratch, and see your decisions come alive in real time. Starting as an analyst, I learned every layerof the business before stepping into leadership. My background in entrepreneurship taught me to think like afounder — which helped me scale from analyst to CEO in just eight years, turning a traditional PPE supplierinto an e-commerce growth story.
